@@ -1,0 +1,15 @@
+Daily Calorie Tracker Report
+User: Harsh
+Date & Time: 2025-10-10 13:03:43.072159
+
+Meal Name	Calories (kcal)
+--------------------------------
+Idli Sambar	400.0
+Paneer Cury & Rice	700.0
+Chicken Biryani	1427.0
+Banana Shake	300.0
+Butter Milk	200.0
+--------------------------------
+Total Calories:	3027.0
+Average Calories:	605.40
+Status: Exactly met daily calorie limit.

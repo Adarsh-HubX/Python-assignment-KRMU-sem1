@@ -1,0 +1,14 @@
+Daily Calorie Tracker Report
+User: Rohit
+Date & Time: 2025-10-10 13:07:48.573744
+
+Meal Name	Calories (kcal)
+--------------------------------
+Aaloo Paratha	500.0
+Paneer Butter Masala	600.0
+Jeera Rice	400.0
+Chicken Curry	550.0
+--------------------------------
+Total Calories:	2050.0
+Average Calories:	512.50
+Status: Exceeded daily calorie limit!

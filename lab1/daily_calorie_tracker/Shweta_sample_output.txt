@@ -1,0 +1,13 @@
+Daily Calorie Tracker Report
+User: Shweta
+Date & Time: 2025-10-10 12:48:35.991991
+
+Meal Name	Calories (kcal)
+--------------------------------
+Breakfast	350.0
+Lunch	600.0
+Dinner	200.0
+--------------------------------
+Total Calories:	1150.0
+Average Calories:	383.33
+Status: Within daily calorie limit.
