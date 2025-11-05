@@ -1,7 +1,7 @@
 """
 GradeBook Analyzer - Automated Student Grade Analysis System
-Author: [Your Name]
-Date: November 2025
+Author: Adarsh Rathore
+Date: 5 November 2025
 Purpose: Analyze student grades, compute statistics, assign letter grades, and generate reports
 """
 
