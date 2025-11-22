@@ -100,3 +100,4 @@ class LibraryInventory:
             logging.error(f"Unexpected error loading file: {e}")
             print("Error loading file:", e)
             self.books = []
+
