@@ -1,3 +1,14 @@
+# --------------------------------------------------------------------
+# Name        : Adarsh Rathore
+# Roll No     : <2501410014>
+# Course      : B.Tech CSE (Cyber Security)
+# Semester    : 1st Semester
+# Subject     : Programming for Problem Solving Using Python
+# File        : main.py
+# Project     : Library Inventory Manager
+# --------------------------------------------------------------------
+
+
 from library_manager.book import Book
 import os
 import json
@@ -100,3 +111,4 @@ class LibraryInventory:
             logging.error(f"Unexpected error loading file: {e}")
             print("Error loading file:", e)
             self.books = []
+
