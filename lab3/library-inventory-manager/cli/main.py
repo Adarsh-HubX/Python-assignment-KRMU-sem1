@@ -1,3 +1,14 @@
+# --------------------------------------------------------------------
+# Name        : Adarsh Rathore
+# Roll No     : <2501410014>
+# Course      : B.Tech CSE (Cyber Security)
+# Semester    : 1st Semester
+# Subject     : Programming for Problem Solving Using Python
+# File        : main.py
+# Project     : Library Inventory Manager
+# --------------------------------------------------------------------
+
+
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
