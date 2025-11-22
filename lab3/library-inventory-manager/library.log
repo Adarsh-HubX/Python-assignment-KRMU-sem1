@@ -1,0 +1,25 @@
+2025-11-22 12:51:41,413 - INFO - Data loaded successfully.
+2025-11-22 12:52:18,127 - WARNING - ISBN search failed for: 1111
+2025-11-22 12:52:34,609 - INFO - Data loaded successfully.
+2025-11-22 12:52:38,642 - INFO - Displayed all books.
+2025-11-22 12:54:55,617 - INFO - Displayed all books.
+2025-11-22 12:55:18,575 - INFO - Data loaded successfully.
+2025-11-22 12:55:22,311 - INFO - Displayed all books.
+2025-11-22 12:58:23,145 - INFO - Data loaded successfully.
+2025-11-22 12:58:25,026 - INFO - Displayed all books.
+2025-11-22 13:02:09,553 - INFO - Data loaded successfully.
+2025-11-22 13:04:18,365 - INFO - Data loaded successfully.
+2025-11-22 13:42:46,927 - INFO - Data loaded successfully.
+2025-11-22 13:43:08,731 - INFO - Title search performed for: python
+2025-11-22 13:43:38,010 - INFO - ISBN search found: 116
+2025-11-22 13:43:38,013 - INFO - Data saved successfully.
+2025-11-22 13:43:47,358 - INFO - ISBN search found: 116
+2025-11-22 13:43:47,361 - INFO - Data saved successfully.
+2025-11-22 13:48:46,501 - INFO - Data loaded successfully.
+2025-11-22 13:49:33,766 - INFO - Data loaded successfully.
+2025-11-22 13:49:54,557 - INFO - Data loaded successfully.
+2025-11-22 13:51:50,593 - INFO - ISBN search found: 115
+2025-11-22 13:51:50,597 - INFO - Data saved successfully.
+2025-11-22 13:52:18,019 - INFO - ISBN search found: 115
+2025-11-22 13:52:18,022 - INFO - Data saved successfully.
+2025-11-22 13:52:46,856 - INFO - ISBN search found: 113
