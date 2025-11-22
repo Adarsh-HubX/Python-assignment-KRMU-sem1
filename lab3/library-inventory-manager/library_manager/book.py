@@ -29,4 +29,5 @@ class Book:
     def return_book(self):
         if self.is_available():
             raise ValueError("This book is not issued.")
+
         self.status = "available"
