@@ -1,17 +1,9 @@
-"""
-GradeBook Analyzer - Automated Student Grade Analysis System
-Author: Adarsh Rathore
-Date: 5 November 2025
-Purpose: Analyze student grades, compute statistics, assign letter grades, and generate reports
-"""
-
 import csv
 import statistics
 from pathlib import Path
 
 
 def print_welcome():
-    """Display welcome message and usage menu"""
     print("\n" + "="*60)
     print("             WELCOME TO GRADEBOOK ANALYZER v1.0")
     print("="*60)
@@ -24,7 +16,6 @@ def print_welcome():
 
 
 def get_input_method():
-    """Ask user to choose between manual input or CSV file"""
     while True:
         print("\n" + "-"*60)
         print("How would you like to input student data?")
@@ -38,7 +29,6 @@ def get_input_method():
 
 
 def manual_data_entry():
-    """Collect student marks manually from user input"""
     marks = {}
     print("\n--- MANUAL DATA ENTRY ---\n")
 
@@ -84,9 +74,7 @@ def manual_data_entry():
 
 
 def load_csv_data():
-    """Load student data safely from a CSV file (handles BOM, spacing, and flexible column names)."""
     print("\n--- CSV FILE IMPORT ---\n")
-    # Define acceptable column names for flexibility
     NAME_KEYS = ['name', 'student', 'id']
     MARK_KEYS = ['mark', 'score', 'grade', 'points']
 
@@ -137,7 +125,7 @@ def load_csv_data():
                         if name and 0 <= mark <= 100:
                             marks[name] = mark
                     except (IndexError, ValueError):
-                        continue # Skip invalid rows silently
+                        continue
 
             if not marks:
                 print("❌ No valid student records found in this CSV.\nMake sure the file has 'Name' and 'Marks' columns and valid data (0-100).\n")
@@ -151,21 +139,18 @@ def load_csv_data():
 
 
 def calculate_average(marks_dict):
-    """Calculate average marks"""
     if not marks_dict:
         return 0
     return sum(marks_dict.values()) / len(marks_dict)
 
 
 def calculate_median(marks_dict):
-    """Calculate median marks"""
     if not marks_dict:
         return 0
     return statistics.median(marks_dict.values())
 
 
 def find_max_score(marks_dict):
-    """Find maximum marks"""
     if not marks_dict:
         return 0.0, None
     max_student = max(marks_dict, key=marks_dict.get)
@@ -173,7 +158,6 @@ def find_max_score(marks_dict):
 
 
 def find_min_score(marks_dict):
-    """Find minimum marks"""
     if not marks_dict:
         return 0.0, None
     min_student = min(marks_dict, key=marks_dict.get)
@@ -181,7 +165,6 @@ def find_min_score(marks_dict):
 
 
 def assign_grade(mark):
-    """Assign letter grade"""
     if mark >= 90:
         return 'A'
     elif mark >= 80:
@@ -195,12 +178,10 @@ def assign_grade(mark):
 
 
 def create_grades_dict(marks_dict):
-    """Create dictionary with grades"""
     return {name: assign_grade(mark) for name, mark in marks_dict.items()}
 
 
 def get_grade_distribution(grades_dict):
-    """Count students per grade category"""
     distribution = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'F': 0}
     for grade in grades_dict.values():
         if grade in distribution:
@@ -209,14 +190,12 @@ def get_grade_distribution(grades_dict):
 
 
 def get_pass_fail_students(marks_dict, passing_threshold=40):
-    """Filter pass/fail students"""
     passed = [name for name, mark in marks_dict.items() if mark >= passing_threshold]
     failed = [name for name, mark in marks_dict.items() if mark < passing_threshold]
     return passed, failed, passing_threshold
 
 
 def display_statistics(marks_dict):
-    """Display statistical analysis"""
     if not marks_dict:
         return 
         
@@ -236,7 +215,6 @@ def display_statistics(marks_dict):
 
 
 def display_grade_distribution(grades_dict):
-    """Display grade distribution"""
     if not grades_dict:
         return
 
@@ -256,7 +234,6 @@ def display_grade_distribution(grades_dict):
 
 
 def display_pass_fail_summary(marks_dict):
-    """Display pass/fail analysis"""
     if not marks_dict:
         return
 
@@ -280,7 +257,6 @@ def display_pass_fail_summary(marks_dict):
 
 
 def display_results_table(marks_dict, grades_dict):
-    """Display formatted results table"""
     if not marks_dict:
         return
 
@@ -299,10 +275,6 @@ def display_results_table(marks_dict, grades_dict):
 
 
 def export_to_csv(marks_dict, grades_dict):
-    """
-    Export results to a SIMPLE, RE-USABLE CSV format (Student Name, Marks, Grade).
-    This format is easy to load back into the program.
-    """
     if not marks_dict:
         print("❌ Cannot export: No student data available.\n")
         return
@@ -327,10 +299,8 @@ def export_to_csv(marks_dict, grades_dict):
         with open(file_path, 'w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
             
-            # Writing the required header row for easy loading
             writer.writerow(['Student Name', 'Marks', 'Grade'])
 
-            # Writing the data rows
             for name in sorted(marks_dict.keys()):
                 writer.writerow([name, marks_dict[name], grades_dict[name]])
 
@@ -340,7 +310,6 @@ def export_to_csv(marks_dict, grades_dict):
 
 
 def get_next_action(exported):
-    """Unified function to ask for the next action after analysis."""
     print("\n" + "="*60)
     print("WHAT WOULD YOU LIKE TO DO NEXT?")
     print("="*60)
@@ -363,7 +332,6 @@ def get_next_action(exported):
 
 
 def analyze_gradebook(marks_dict):
-    """Main analysis function, calculates, displays, and handles export."""
     if not marks_dict:
         print("❌ No student data available for analysis.")
         return 'analyze_new' 
@@ -385,7 +353,6 @@ def analyze_gradebook(marks_dict):
 
 
 def main_menu_loop():
-    """Main CLI loop for repeated analysis"""
     print_welcome()
     
     marks = {} 
@@ -413,4 +380,3 @@ def main_menu_loop():
 
 if __name__ == "__main__":
     main_menu_loop()
-
